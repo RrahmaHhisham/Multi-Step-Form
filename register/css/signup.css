@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    height: 100vh;
+    display: flex;
+    justify-content: center !important;
+    align-items: center !important;
+    background: linear-gradient(
+      90deg,
+      rgba(136, 14, 25, 1) 0%,
+      rgba(4, 2, 25, 1) 74%
+    );
+  
+    color: white !important;
+  }
+
+
+  .login-section{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+
+}
+.formsection{
+    width: 40%;
+    min-height: 100vh;
+}
+.formsection h2{
+    font-size: 22px;
+    color:white;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 25px;
+    font-weight: bold;
+}
+.formsection form{
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    margin-top:20px;
+    padding: 20px 40px;
+
+}
+.formsection form input{
+    margin: 20px 0;
+    width: 90%;
+    border: 1px solid #770c19;
+    height: 40px;
+    border-radius: 10px;
+    padding-inline-start: 20px;
+    outline: none;
+
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+  }
+
+
+.btn {
+    position: relative;
+    width: 200px;
+    height: 45px;
+    background-color: transparent;
+    border: 2px #770c19 solid;
+    outline: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    color: white !important;
+    font-weight: 600;
+    z-index: 1;
+    overflow: hidden;
+    margin-right: 5%;
+  }
+  
+  .btn::before {
+    content: "";
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 300%;
+    background: linear-gradient(#081b29, #770c19, #081b29, #770c19);
+    z-index: -1;
+    transition: 0.5s;
+  }
+  
+  .btn:hover:before {
+    top: 0;
+  }
+
+
+
+
+
+@media (max-width:700px) {
+    .formsection{
+        background-image: linear-gradient(to bottom, #770c19,   #081b29);
+        width:100%;
+    }
+    .formsection h2{
+        color: #fff;
+    }
+    .formsection form input{
+        width: 95%;
+    }
+    .none{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 10px 0;
+        border-radius: 5px;
+    }
+}
